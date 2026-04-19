@@ -85,8 +85,7 @@ Steps: Open the project in Android Studio and click "Sync Now" to download depen
 ## 6. GitHub and video link locations
 The GitHub and video links are included in the online text file of your assignment submission, and can also be found in the report.
 GitHub: https://github.com/wei10101/spacecolonygame.git
-Video: spacecolonygame – MissionControl.java [spacecolonygame.app.main] 2026-04-19 13-44-22.mp4
-
+Video: https://lut-my.sharepoint.com/:v:/g/personal/yuewei_tian_student_lut_fi/IQAnsGf2SgbFRpXXeL21vZSzATLYY6IcGD4lXPAvqWJUH3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=nz0Qh0
 ## 7. Team members
 Yuewei Tian 002689458
 Junshang Tian 003313192

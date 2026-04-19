@@ -1,41 +1,41 @@
-Group Leopard project documentation
+## Group Leopard project documentation
 Group member: Yuewei Tian and Junshang Tian
 
 ## 1.	Project Description
 This project is a space colony crew management and mission simulation system developed based on the Android platform. Players can create crew members of different professions, manage their training, dispatch them on missions, combat various randomly generated threats, and collect relevant data on mission execution.
 The main player workflow includes:
-a.	Recruiting Crew Members (Different Professions)
-b.	Managing Crew Member Status (Level Up, Energy, Experience, etc.)
-c.	Selecting Crew Members for Missions
-d.	Engaging in Turn-Based Combat During Missions
-e.	Gaining Experience and Improving Crew Member Abilities
+-	Recruiting Crew Members (Different Professions)
+-	Managing Crew Member Status (Level Up, Energy, Experience, etc.)
+-	Selecting Crew Members for Missions
+-	Engaging in Turn-Based Combat During Missions
+-	Gaining Experience and Improving Crew Member Abilities
 This system features:
-a.	Multi-Profession System (Each profession has different abilities)
-b.	Turn-Based Combat Mechanism
-c.	Experience Growth System
-d.	Buff/Debuff Mechanism
-e.	Local Data Storage (Supports Saving and Loading)
-f.	Complete Game Flow (Creation → Missions → Growth)
+-	Multi-Profession System (Each profession has different abilities)
+-	Turn-Based Combat Mechanism
+-	Experience Growth System
+-	Buff/Debuff Mechanism
+-	Local Data Storage (Supports Saving and Loading)
+-	Complete Game Flow (Creation → Missions → Growth)
 
 ## 2.	Implementation
 ## 2.1. Technical Environment
-This project uses the following technologies:
-Programming Language: Java
-Development Platform: Android Studio
-Data Storage: Gson (JSON format)
-UI Components: RecyclerView, Activity
+- This project uses the following technologies:
+- Programming Language: Java
+- Development Platform: Android Studio
+- Data Storage: Gson (JSON format)
+- UI Components: RecyclerView, Activity
 ## 2.2. Structure
 The system follows a layered architecture design, consisting of four main layers: UI, Manager, Game Logic, and Data Storage.
 The UI layer handles user interaction and display. The Manager layer, including GameManager and MissionControl, coordinates game flow and logic. The Game Logic layer defines core gameplay elements such as CrewMember, Threat, and combat mechanics. The Data layer manages persistent storage using JSON serialization.
 ## 2.3. Core Module Description
-- CrewMember (Crew System)
+- CrewMember (Crew System):
 This is the core class of the entire system, used to represent crew members.
 Main attributes include name, specialization, skill level, energy, and resilience.
 The main functions include: taking damage (takeDamage), defending (defend), gaining experience (getExperience), and using special skills (special).
-- Character System
+- Character System:
 The system features five characters: Pilot (high defense), Engineer (balanced), Medic (healing ability), Scientist (high skill), and Soldier (high attack).
 Each character inherits from CrewManager and has their own set of skills; some characters also have special bonuses when facing specific threats.
-- MissionControl (Mission System)
+- MissionControl (Mission System):
 This class is responsible for controlling the entire combat flow and is the core logic of the game.
 Functions include: generating enemies (Threats), controlling turn order, handling player actions (attack, defense, skills), calculating damage, and determining victory or defeat.
 Combat Mechanics (Turn-based)
@@ -44,7 +44,7 @@ Player Chooses Action: Attack, Defend, Special (Skill)
 Damage Calculation: Damage = Attack Power - Defense Power
 Enemy Counterattacks
 And a textual description of the battle process.
-- Threat System
+- Threat System:
 Represents enemies or events in a mission.
 Attributes: Health, Skill, Resilience, Type
 Different Threats have different effects, for example:
@@ -52,14 +52,14 @@ Virus Outbreak: Crew members lose energy
 System Failure: Defense decreases
 New Planet: Experience increases
 Alien Invasion: Mass attack
-- Storage (Data Storage)
+- Storage (Data Storage):
 Used to save game data.
 Functions: Saves crew information, reads save files, and manages all crew members.
 Data is converted to JSON files using Gson and saved.
-- GameManager (Global Control)
+- GameManager (Global Control):
 Uses Singleton Pattern:There is only one GameManager in the entire game. 
 Its functions include: managing Storage, managing MissionControl, and providing a unified entry point.
-- MedBay (Medical System)
+- MedBay (Medical System):
 Used for managing injured crew members.
 Functions: Store injured crew members, restore crew member status, send crew members back to Quarters.
 
@@ -96,11 +96,11 @@ Junshang Tian is responsible for UI and system integration, including interface 
 Use GitHub to share code and implement version control.
 
 ## 9. Tools
-Android Studio: Development
-Java: Programming
-Gson: Data Storage
-GitHub: Code Management
-PlantUML: Drawing UML Diagrams
+- Android Studio: Development
+- Java: Programming
+- Gson: Data Storage
+- GitHub: Code Management
+- PlantUML: Drawing UML Diagrams
 
 ## 10. Basic Functionality
 The application includes the following features:
@@ -130,14 +130,14 @@ q. HashMap<Integer, CrewMember> is used for storing crew members and their IDs.
 r. ArrayList is widely used in the system to manage dynamic collections of crew members. It is used in MissionControl to store the selected team, in MedBay to track injured crew, in Storage to return filtered crew lists, and in the UI adapter to handle user selections.
 
 ## 11. Bonus Features
-- RecyclerView	
+- RecyclerView:	
 The application uses RecyclerView to efficiently display and manage a list of crew members. Data is retrieved from the Storage class and passed to a custom adapter (CrewAdapter), which binds crew information such as name, specialization, skill level, and energy to the UI components.
 The RecyclerView supports user interaction, including selecting up to three crew members, highlighting selected items, and navigating to a detailed view of each crew member.
-- Crew Images	
+- Crew Images:	
 Each crew specialization is represented with a unique image.
 - Mission Visualization	
 Use a progress bar (energy bar) in the mission interface to display the energy changes of the threat and the crew.
-- Tactical Combat	
+- Tactical Combat:	
 Implements a turn-based combat system where players can choose actions such as attack, defend, or use special abilities, while threats respond automatically.
 Defensive effect: Medic: Grants 5 energy to the crew with the lowest health；
 others ：halves the damage taken.
@@ -147,18 +147,18 @@ Engineer: Gains +1 defense for one turn.
 Soldier: Deals high burst damage (Damage increased by 3 and ignores defense). 
 Scientist: Reduces the threat’s defense by 2. 
 Pilot: Causes the threat to skip its next attack.
-- Statistics	
+- Statistics:	
 Tracks game data including missions completed, victories, training sessions and statistics on individual crew members.
-- No Death System	
+- No Death System:	
 Instead of permanent death, defeated crew members are sent to the MedBay and can later recover, maintaining game continuity.
-- Randomness in Missions	
+- Randomness in Missions:	
 Introducing randomness into combat and mission generation, such as changing threat damage and crew damage (ranging from +2 to -2), randomizing the threat type for each mission, and dealing damage to random crew members each turn, can enhance the game's replayability.
-- Specialization Bonuses	
+- Specialization Bonuses:	
 Crew members of different professions may receive specific skill bonuses when facing certain threats, including engineer receiving a +2 skill bonus when facing system failures; 
 scientist receiving a +2 skill bonus when facing new planets;  medic receiving a +2 skill bonus when facing virus outbreaks.
-- Larger Squads	
+- Larger Squads:	
 Supports missions with up to three crew members.
-- Data Storage & Loading	
+- Data Storage & Loading:	
 The game uses Gson to save and load data from a JSON file. 
 Since CrewMember is an abstract class with multiple subclasses, a RuntimeTypeAdapterFactory is used to preserve subclass type information during serialization and deserialization. The save and load buttons are located in the quarter interface.
 - Custom Feature: 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/darker_gray"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Space Colony Crew Manager"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnRecruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recruit Crew"/>
+
+    <Button
+        android:id="@+id/btnQuarters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quarters"/>
+
+    <Button
+        android:id="@+id/btnSimulator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simulator"/>
+
+    <Button
+        android:id="@+id/btnMissionControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mission Control"/>
+
+    <Button
+        android:id="@+id/btnStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Statistics" />
+
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

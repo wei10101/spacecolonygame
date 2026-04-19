@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spacecolony">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Space Colony"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Spacecolonygame">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.RecruitActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.QuartersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SimulatorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.MissionControlActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.StatisticsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.CrewDetailActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

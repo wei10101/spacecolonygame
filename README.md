@@ -135,7 +135,7 @@ The application uses RecyclerView to efficiently display and manage a list of cr
 The RecyclerView supports user interaction, including selecting up to three crew members, highlighting selected items, and navigating to a detailed view of each crew member.
 - Crew Images:	
 Each crew specialization is represented with a unique image.
-- Mission Visualization	
+- Mission Visualization:	
 Use a progress bar (energy bar) in the mission interface to display the energy changes of the threat and the crew.
 - Tactical Combat:	
 Implements a turn-based combat system where players can choose actions such as attack, defend, or use special abilities, while threats respond automatically.
